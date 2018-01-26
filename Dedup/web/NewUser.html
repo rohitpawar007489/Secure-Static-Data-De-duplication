@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title> New User Form </title>
+  <meta name="description" content=" Login Form " />
+  <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
+  <meta name="author" content="Codrops" />
+  <link rel="shortcut icon" href="../favicon.ico"> 
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/modernizr.custom.63321.js"></script>
+		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+	<style>	
+			@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Handlee);
+			body {
+				background: #eedfcc url(images/bg3.jpg) no-repeat center top;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				background-size: cover;
+			}
+			.container > header h1,
+			.container > header h2 {
+				color: #fff;
+				text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+			}
+	</style>
+                  <script>
+            function validateForm()
+            {
+                  var pass=document.forms["NewUser"]["password"].value;
+                  var re_pass=document.forms["NewUser"]["re-password"].value;
+                  if(pass!==re_pass)
+                  {
+                        alert("Password does not match");
+                        return false;
+                  }
+                  if(pass.length<5)
+                  {
+                      alert("Password should be greater than 5 letters ");
+                      return false;
+                  }
+                 
+            }
+            </script>
+</head>
+<body>
+<div class="container">
+	
+			
+<header>
+	<br><br><br><br><br>
+	<h1><strong>Create New User </strong> </h1>
+			
+<div class="support-note">
+	<span class="note-ie">Sorry, only modern browsers.</span>
+</div>
+				
+</header>
+			
+<section class="main">
+	<form class="form-5 clearfix" name="NewUser" action="/NewUser" method="POST" onsubmit="return validateForm()">
+		<p>
+                    <input type="text" id="acc_id" name="acc_id" placeholder="Account ID" required>
+                    <input type="text" id="user_name" name="user_name" placeholder="User Name" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required> 
+                    <input type="password" name="re-password" id="re-password" placeholder="Re-type Password" required> 
+
+
+		</p>
+
+		<button type="submit" name="submit">
+		<i class="icon-arrow-right"></i>
+		<span>Sign in</span>
+		</button>    
+		<button type="Reset" name="Clear">
+		<i class="icon-arrow-right"></i>
+		<span>Reset</span>
+		</button>     
+ 
+	</form>
+</section>
+			
+</div>
+
+    </body>
+</html>
+
